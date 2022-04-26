@@ -14,6 +14,10 @@ module.exports = {
       black: '#050709',
       white: '#FFFFFF',
       blackText: '#291507',
+      cWhite: '#E3E1DC',
+      sBrown: '#4D270C',
+      brownText: 'rgba(41, 21, 7, 0.6)',
+      // remove this yellow when finished
       yellow: '#9B870C'
     },
     fontFamily: {

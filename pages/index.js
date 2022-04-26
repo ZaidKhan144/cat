@@ -4,6 +4,9 @@ import styles from '../styles/Home.module.css'
 
 import Header from '../components/Header'
 import GetToKnow from '../components/GetToKnow'
+import Discover from '../components/Discover'
+import Why from '../components/Why/Why'
+import Footer from '../components/Footer'
 
 export default function Home() {
   return (
@@ -17,8 +20,25 @@ export default function Home() {
       <Header />
       <main>
         <GetToKnow />
+        <Discover />
+        <Why />
       </main>
-
+      <Footer />
     </div>
   )
 }
+
+// Fetches API data before Next generates the page
+export async function getStaticProps() {
+  const response = await fetch('https://api.thecatapi.com/v1/breeds?api_key=e3bd9ee7-02be-445a-966e-ad339d3a9ff8')
+
+  const catsData = await response.json()
+
+  console.log('Data', catsData)
+  return {
+    props: {
+      catsData
+    }
+  }
+}
+
