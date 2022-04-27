@@ -8,7 +8,7 @@ import Discover from '../components/Discover'
 import Why from '../components/Why/Why'
 import Footer from '../components/Footer'
 
-export default function Home() {
+export default function Home({ catsData }) {
   return (
     <div className="lg:px-24 md:px-16 sm:px-8 xxs:px-4">
       <Head>
@@ -19,7 +19,7 @@ export default function Home() {
 
       <Header />
       <main>
-        <GetToKnow />
+        <GetToKnow catsData={catsData} />
         <Discover />
         <Why />
       </main>
@@ -32,13 +32,12 @@ export default function Home() {
 export async function getStaticProps() {
   const response = await fetch('https://api.thecatapi.com/v1/breeds?api_key=e3bd9ee7-02be-445a-966e-ad339d3a9ff8')
 
-  const catsData = await response.json()
+  const data = await response.json()
 
-  console.log('Data', catsData)
+  // console.log('Data', data)
   return {
     props: {
-      catsData
+      catsData: data
     }
   }
 }
-

@@ -17,7 +17,8 @@ module.exports = {
       cWhite: '#E3E1DC',
       sBrown: '#4D270C',
       brownText: 'rgba(41, 21, 7, 0.6)',
-      // remove this yellow when finished
+      grey: 'rgba(151, 151, 151, 0.1)',
+      // remove this yellow when finished cuz this is just for debugging
       yellow: '#9B870C'
     },
     fontFamily: {

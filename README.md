@@ -32,3 +32,17 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+<!--
+
+What I've learned:
+
+- Usage of TailwindCSS
+- Can't use next Image component directly in next Link component, you have to make a ref for that.
+- Usage of Fontawesome Icon in next js
+- CSS modules with Next JS
+- All the assets goes in the public folder
+- pages > index.js where we are fetching all the API data
+- The fetched data goes in prop and then pass around that prop to other components
+
+-->
