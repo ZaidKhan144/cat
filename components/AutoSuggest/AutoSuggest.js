@@ -18,8 +18,10 @@ const AutoSuggest = ({ breedData, searchInput, setSearchInput }) => {
   const [suggestionsArr, setSuggestionsArr] = useState([]);
 
   const handleChange = (e) => {
+    // Whatever value we will select, it will set the input value in the search bar
     setSearchInput(e.target.value)
 
+    // Setting suggestions in suggestionsArr so that we could render each suggestions under input
     const mySuggestions = getSuggestions(e.target.value, breedData)
     setSuggestionsArr(mySuggestions)
   }
@@ -48,7 +50,9 @@ const AutoSuggest = ({ breedData, searchInput, setSearchInput }) => {
                     className="text-black text-[18px] p-2 last:mb-4 hover:cursor-pointer hover:bg-grey"
                     key={suggestions.name}
                     onClick={() => {
+                      // Setting suggestions in input
                       setSearchInput(suggestions.name)
+                      // Remove the suggestions on click
                       setSuggestionsArr([])
                     }}
                   >

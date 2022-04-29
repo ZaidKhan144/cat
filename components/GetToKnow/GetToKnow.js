@@ -16,6 +16,7 @@ const GetToKnow = ({ catsData }) => {
   const [ searchInput, setSearchInput ] = useState('');
 
   useState(() => {
+    // sets cats data (id, name) into breed data
     setBreedData(
       catsData.map((cat) => {
         return {
@@ -28,6 +29,12 @@ const GetToKnow = ({ catsData }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Checking the typed breed matches the breed data
+    const selectedCat = breedData.find((cat) =>
+      cat.name.toLowerCase().includes(searchInput.toLowerCase())
+    )
+
 
   }
 
@@ -43,6 +50,7 @@ const GetToKnow = ({ catsData }) => {
           />
           <p className='max-w-[80%] text-white text-2xl'>Get to know more about your cat breed</p>
           <div className='flex relative mt-10'>
+            {/* Passing breed data and input to AutoSuggest */}
             <AutoSuggest
               breedData={breedData}
               searchInput={searchInput}
