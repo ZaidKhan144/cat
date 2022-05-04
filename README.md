@@ -44,5 +44,9 @@ What I've learned:
 - All the assets goes in the public folder
 - pages > index.js where we are fetching all the API data
 - The fetched data goes in prop and then pass around that prop to other components
+- useRouter hook to make a route in the app
+- Layout component to render Header and footer on all pages
+- Next ask you to add the hostname of image url in next config if we use a host name in the URL.
+
 
 -->

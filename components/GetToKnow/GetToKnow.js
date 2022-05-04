@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image'
+import { useRouter } from 'next/router';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -14,6 +15,7 @@ const GetToKnow = ({ catsData }) => {
 
   const [ breedData, setBreedData ] = useState([])
   const [ searchInput, setSearchInput ] = useState('');
+  const router = useRouter();
 
   useState(() => {
     // sets cats data (id, name) into breed data
@@ -35,7 +37,9 @@ const GetToKnow = ({ catsData }) => {
       cat.name.toLowerCase().includes(searchInput.toLowerCase())
     )
 
-
+    if(selectedCat) {
+      router.push(`/cats/${selectedCat.id}`);
+    }
   }
 
   return (
@@ -49,7 +53,7 @@ const GetToKnow = ({ catsData }) => {
             height={100}
           />
           <p className='max-w-[80%] text-white text-2xl'>Get to know more about your cat breed</p>
-          <div className='flex relative mt-10'>
+          <form className='flex relative mt-10' onSubmit={handleSubmit}>
             {/* Passing breed data and input to AutoSuggest */}
             <AutoSuggest
               breedData={breedData}
@@ -57,7 +61,6 @@ const GetToKnow = ({ catsData }) => {
               setSearchInput={setSearchInput}
             />
             <button
-              onSubmit={handleSubmit}
               className='cursor-pointer absolute right-7 top-6 z-10'
               type='submit'>
                 <Image
@@ -67,7 +70,7 @@ const GetToKnow = ({ catsData }) => {
                   height={22}
                 />
               </button>
-          </div>
+          </form>
         </div>
         <div>
           <Image

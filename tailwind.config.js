@@ -18,6 +18,8 @@ module.exports = {
       sBrown: '#4D270C',
       brownText: 'rgba(41, 21, 7, 0.6)',
       grey: 'rgba(151, 151, 151, 0.1)',
+      statusBarColor: '#544439',
+      statusBarGrey: '#E0E0E0',
       // remove this yellow when finished cuz this is just for debugging
       yellow: '#9B870C'
     },
