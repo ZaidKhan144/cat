@@ -63,7 +63,7 @@ const Discover = () => {
             </div>
             <div className='flex my-9 justify-between items-center'>
                 <h2 className='text-5xl font-bold leading-[58.51px] max-w-md'>66+ Breeds For you to discover</h2>
-                <Link href='/'>
+                <Link href='/cats'>
                     <a className="text-brownText uppercase flex justify-between items-center" >See More <FontAwesomeIcon className='w-8 pl-4' icon={faArrowRight} /> </a>
                 </Link>
             </div>

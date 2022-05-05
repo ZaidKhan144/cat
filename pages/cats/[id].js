@@ -49,7 +49,7 @@ const Cat = ({ data }) => {
         <div className='pt-20 pb-44'>
           <h3 className='text-4xl mb-10'>Other photos</h3>
           <div className=''>
-            <div className='flex flex-wrap justify-between gap-11'>
+            <div className='flex flex-wrap gap-11'>
               {
                 images.map((img, index) => {
                   if(index === 0) return;
@@ -60,8 +60,8 @@ const Cat = ({ data }) => {
                         className='rounded-3xl'
                         src={img.url}
                         alt={cat.name}
-                        width={395}
-                        height={400}
+                        width={375}
+                        height={375}
                       />
                     </div>
                   )
