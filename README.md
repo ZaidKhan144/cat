@@ -48,5 +48,12 @@ What I've learned:
 - Layout component to render Header and footer on all pages
 - Next ask you to add the hostname of image url in next config if we use a host name in the URL.
 
+To do:
 
+- Make responsive
+- Add animation
+- 404 modal
+- Gallery mode on Images
+- Random Cat (Optional)
+- Top 10 Searches
 -->
